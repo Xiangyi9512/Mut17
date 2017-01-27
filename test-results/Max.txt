@@ -1,0 +1,37 @@
+entered daikon.chicory.Runtime.setDtrace(.\Max.dtrace.gz, false)...
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+examples.Max.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+examples.Max.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+examples.Max.max(int, int, examples.SimpleInteger):::ENTER
+z != null
+z.value == 0
+x != y
+x != z.value
+y != z.value
+===========================================================================
+examples.Max.max(int, int, examples.SimpleInteger):::EXIT
+z.value >= orig(x)
+z.value >= orig(y)
+z.value != orig(z.value)
+===========================================================================
+examples.SimpleInteger:::OBJECT
+this.value == 0
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::ENTER
+a == 0
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::EXIT
+this.value == orig(a)
+Exiting Daikon.

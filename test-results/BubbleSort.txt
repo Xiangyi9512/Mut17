@@ -1,0 +1,42 @@
+entered daikon.chicory.Runtime.setDtrace(.\BubbleSort.dtrace.gz, false)...
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+examples.BubbleSort.bubbleSort(int[]):::ENTER
+x != null
+===========================================================================
+examples.BubbleSort.bubbleSort(int[]):::EXIT
+x[] <= orig(x[]) (lexically)
+x[] sorted by <=
+===========================================================================
+examples.BubbleSort.dummyInner(int[], int, int):::ENTER
+x != null
+i >= 0
+n > i
+n <= size(x[])-1
+i < size(x[])-1
+===========================================================================
+examples.BubbleSort.dummyInner(int[], int, int):::EXIT
+x[] == orig(x[])
+orig(n) <= size(x[])-1
+orig(i) < size(x[])-1
+===========================================================================
+examples.BubbleSort.dummyOuter(int[], int):::ENTER
+x != null
+n <= size(x[])
+===========================================================================
+examples.BubbleSort.dummyOuter(int[], int):::EXIT
+x[] == orig(x[])
+===========================================================================
+examples.BubbleSort.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+examples.BubbleSort.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+Exiting Daikon.

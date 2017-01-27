@@ -1,0 +1,131 @@
+entered daikon.chicory.Runtime.setDtrace(.\QuickSort.dtrace.gz, false)...
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+examples.QuickSort.dummy_point1(int, int, int, int[]):::ENTER
+i >= 0
+j >= 1
+arr != null
+i <= j
+i < size(arr[])-1
+j <= size(arr[])-1
+pivot in arr[]
+===========================================================================
+examples.QuickSort.dummy_point1(int, int, int, int[]):::EXIT
+arr[] == orig(arr[])
+orig(pivot) in arr[]
+orig(i) < size(arr[])-1
+orig(j) <= size(arr[])-1
+===========================================================================
+examples.QuickSort.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+examples.QuickSort.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+examples.QuickSort.partition(int[], int, int, examples.SimpleInteger):::ENTER
+arr != null
+left >= 0
+right >= 1
+part != null
+part.value == 0
+left < right
+left >= part.value
+left < size(arr[])-1
+right > part.value
+right <= size(arr[])-1
+part.value < size(arr[])-1
+arr[left] >= arr[part.value]
+===========================================================================
+examples.QuickSort.partition(int[], int, int, examples.SimpleInteger):::EXIT
+arr[] <= orig(arr[]) (lexically)
+part.value >= 1
+orig(arr[post(part.value)]) in arr[]
+orig(arr[post(part.value)-1]) in arr[]
+orig(arr[left]) in arr[]
+orig(arr[right]) in arr[]
+orig(arr[right-1]) in arr[]
+orig(arr[part.value]) in arr[]
+part.value > orig(left)
+part.value <= orig(right)
+part.value > orig(part.value)
+part.value <= size(arr[])-1
+part.value != arr[orig(part.value)]
+arr[part.value] in orig(arr[])
+arr[part.value-1] in orig(arr[])
+arr[orig(left)] in orig(arr[])
+arr[orig(right)] in orig(arr[])
+arr[orig(right)-1] in orig(arr[])
+arr[orig(part.value)] in orig(arr[])
+orig(left) < size(arr[])-1
+orig(right) <= size(arr[])-1
+orig(right) != arr[orig(part.value)]
+orig(part.value) < size(arr[])-1
+size(arr[])-1 != arr[orig(part.value)]
+orig(size(arr[])) != arr[orig(part.value)]
+arr[part.value] >= arr[part.value-1]
+arr[part.value] >= arr[orig(left)]
+arr[part.value] >= arr[orig(part.value)]
+arr[part.value] >= orig(arr[post(part.value)])
+arr[part.value-1] <= arr[orig(right)]
+arr[part.value-1] <= arr[orig(right)-1]
+arr[part.value-1] <= orig(arr[post(part.value)-1])
+arr[orig(left)] <= arr[orig(right)]
+arr[orig(left)] >= arr[orig(part.value)]
+arr[orig(left)] <= orig(arr[left])
+arr[orig(right)] >= arr[orig(part.value)]
+arr[orig(right)] >= orig(arr[right])
+arr[orig(part.value)] <= orig(arr[left])
+arr[orig(part.value)] <= orig(arr[part.value])
+===========================================================================
+examples.QuickSort.quickSort(int[]):::ENTER
+arr != null
+===========================================================================
+examples.QuickSort.quickSort(int[]):::EXIT
+arr[] < orig(arr[]) (lexically)
+arr[] <= orig(arr[]) (lexically)
+arr[] sorted by <=
+===========================================================================
+examples.QuickSort.quicksortRecursive(int[], int, int):::ENTER
+arr != null
+left >= 0
+right >= 1
+left < right
+left < size(arr[])-1
+right <= size(arr[])-1
+===========================================================================
+examples.QuickSort.quicksortRecursive(int[], int, int):::EXIT
+arr[] <= orig(arr[]) (lexically)
+orig(arr[left]) in arr[]
+orig(arr[right]) in arr[]
+orig(arr[right-1]) in arr[]
+arr[orig(left)] in orig(arr[])
+arr[orig(right)] in orig(arr[])
+arr[orig(right)-1] in orig(arr[])
+orig(left) < size(arr[])-1
+orig(right) <= size(arr[])-1
+arr[orig(left)] <= arr[orig(right)]
+arr[orig(left)] <= arr[orig(right)-1]
+arr[orig(left)] <= orig(arr[left])
+arr[orig(left)] <= orig(arr[right])
+arr[orig(left)] <= orig(arr[right-1])
+arr[orig(right)] >= arr[orig(right)-1]
+arr[orig(right)] >= orig(arr[left])
+arr[orig(right)] >= orig(arr[right])
+arr[orig(right)] >= orig(arr[right-1])
+===========================================================================
+examples.SimpleInteger:::OBJECT
+this.value == 0
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::ENTER
+a == 0
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::EXIT
+this.value == orig(a)
+Exiting Daikon.

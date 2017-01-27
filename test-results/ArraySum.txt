@@ -1,0 +1,58 @@
+entered daikon.chicory.Runtime.setDtrace(.\ArraySum.dtrace.gz, false)...
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+examples.ArraySum.arraySum(int, int[], examples.SimpleInteger):::ENTER
+n == size(b[])
+b != null
+s != null
+s.value == 0
+n != b[s.value]
+s.value <= size(b[])-1
+size(b[])-1 != b[n-1]
+size(b[])-1 != b[s.value]
+===========================================================================
+examples.ArraySum.arraySum(int, int[], examples.SimpleInteger):::EXIT
+b[] == orig(b[])
+s.value != orig(n)
+s.value != size(b[])-1
+orig(n) != b[orig(s.value)]
+orig(s.value) <= size(b[])-1
+size(b[])-1 != b[orig(n)-1]
+size(b[])-1 != b[orig(s.value)]
+===========================================================================
+examples.ArraySum.loopDummy(int, examples.SimpleInteger, int, int[]):::ENTER
+n == size(b[])
+i >= 0
+s != null
+b != null
+i <= size(b[])-1
+size(b[])-1 != b[n-1]
+===========================================================================
+examples.ArraySum.loopDummy(int, examples.SimpleInteger, int, int[]):::EXIT
+s.value == orig(s.value)
+b[] == orig(b[])
+orig(i) <= size(b[])-1
+size(b[])-1 != b[orig(n)-1]
+===========================================================================
+examples.ArraySum.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+examples.ArraySum.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+examples.SimpleInteger:::OBJECT
+this.value == 0
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::ENTER
+a == 0
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::EXIT
+this.value == orig(a)
+Exiting Daikon.

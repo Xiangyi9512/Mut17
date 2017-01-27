@@ -1,0 +1,67 @@
+entered daikon.chicory.Runtime.setDtrace(.\MinArray.dtrace.gz, false)...
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+examples.MinArray.dummy(int, int[], examples.SimpleInteger, int):::ENTER
+n == size(b[])
+b != null
+x != null
+i >= 1
+b[n-1] != 0
+n != b[n-1]
+x.value in b[]
+x.value != i
+x.value != size(b[])-1
+x.value <= b[i-1]
+i <= size(b[])-1
+===========================================================================
+examples.MinArray.dummy(int, int[], examples.SimpleInteger, int):::EXIT
+b[] == orig(b[])
+x.value == orig(x.value)
+b[orig(n)-1] != 0
+x.value in b[]
+x.value != orig(i)
+x.value != size(b[])-1
+x.value <= b[orig(i)-1]
+orig(n) != b[orig(n)-1]
+orig(i) <= size(b[])-1
+===========================================================================
+examples.MinArray.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+examples.MinArray.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+examples.MinArray.minArray(int, int[], examples.SimpleInteger):::ENTER
+n == size(b[])
+b != null
+x != null
+n != b[n-1]
+x.value in b[]
+x.value != size(b[])-1
+===========================================================================
+examples.MinArray.minArray(int, int[], examples.SimpleInteger):::EXIT
+b[] == orig(b[])
+b[] elements >= x.value
+x.value in b[]
+orig(x.value) in b[]
+x.value != orig(n)
+x.value <= orig(x.value)
+x.value != size(b[])-1
+x.value <= b[orig(n)-1]
+orig(n) != b[orig(n)-1]
+orig(x.value) != size(b[])-1
+===========================================================================
+examples.SimpleInteger:::OBJECT
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::ENTER
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::EXIT
+this.value == orig(a)
+Exiting Daikon.

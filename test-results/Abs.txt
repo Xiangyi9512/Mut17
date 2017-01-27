@@ -1,0 +1,31 @@
+entered daikon.chicory.Runtime.setDtrace(.\Abs.dtrace.gz, false)...
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+examples.Abs.abs(examples.SimpleInteger):::ENTER
+x != null
+===========================================================================
+examples.Abs.abs(examples.SimpleInteger):::EXIT
+orig(x.value) % x.value == 0
+x.value % orig(x.value) == 0
+x.value >= orig(x.value)
+===========================================================================
+examples.Abs.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+examples.Abs.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+examples.SimpleInteger:::OBJECT
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::ENTER
+===========================================================================
+examples.SimpleInteger.SimpleInteger(int):::EXIT
+this.value == orig(a)
+Exiting Daikon.
