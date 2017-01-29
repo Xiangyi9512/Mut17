@@ -1,0 +1,28 @@
+entered daikon.chicory.Runtime.setDtrace(.\gcd.dtrace.gz, false)...
+13 13
+1 1
+20 20
+18913 18913
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+gcd.gcdMethodOne(int, int):::ENTER
+===========================================================================
+gcd.gcdMethodOne(int, int):::EXIT
+===========================================================================
+gcd.gcdMethodTwo(int, int):::ENTER
+===========================================================================
+gcd.gcdMethodTwo(int, int):::EXIT
+===========================================================================
+gcd.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+gcd.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+Exiting Daikon.

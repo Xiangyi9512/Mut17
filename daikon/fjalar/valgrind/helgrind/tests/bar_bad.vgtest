@@ -1,0 +1,5 @@
+# disabled
+# prereq: test -e bar_bad
+prereq: false
+prog: bar_bad
+vgopts: -q

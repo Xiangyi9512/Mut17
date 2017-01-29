@@ -1,0 +1,122 @@
+entered daikon.chicory.Runtime.setDtrace(.\JunitTesting.dtrace.gz, false)...
+1
+2
+0.0
+1
+3
+0.0
+1
+4
+0.0
+1
+5
+0.0
+1
+6
+0.0
+4
+7
+0.0
+4
+8
+1.0
+4
+9
+0.5
+4
+10
+0.33333334
+4
+11
+0.25
+9
+12
+0.0
+9
+13
+2.0
+9
+14
+1.0
+9
+15
+0.6666667
+9
+16
+0.5
+16
+17
+0.0
+16
+18
+3.0
+16
+19
+1.5
+16
+20
+1.0
+16
+21
+0.75
+25
+22
+0.0
+25
+23
+4.0
+25
+24
+2.0
+25
+25
+1.3333334
+25
+26
+1.0
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+JunitTesting:::OBJECT
+===========================================================================
+JunitTesting.JunitTesting():::EXIT
+===========================================================================
+JunitTesting.countA(java.lang.String):::ENTER
+arg0 != null
+===========================================================================
+JunitTesting.countA(java.lang.String):::EXIT
+arg0.toString == orig(arg0.toString)
+===========================================================================
+JunitTesting.div(int, int):::ENTER
+arg0 >= 0
+arg1 >= 0
+===========================================================================
+JunitTesting.div(int, int):::EXIT15
+return == 0.0
+orig(arg1) == 0
+===========================================================================
+JunitTesting.div(int, int):::EXIT17
+orig(arg1) >= 1
+===========================================================================
+JunitTesting.div(int, int):::EXIT
+(orig(arg1) == 0)  ==>  (return == 0.0)
+===========================================================================
+JunitTesting.main(java.lang.String[]):::ENTER
+arg0 has only one value
+arg0.getClass().getName() == java.lang.String[].class
+arg0[] == []
+arg0[].toString == []
+===========================================================================
+JunitTesting.main(java.lang.String[]):::EXIT
+arg0[] == orig(arg0[])
+arg0[] == []
+arg0[].toString == []
+===========================================================================
+JunitTesting.square(int):::ENTER
+arg0 >= 0
+===========================================================================
+JunitTesting.square(int):::EXIT
+return >= 1
+return > orig(arg0)
+Exiting Daikon.

@@ -1,0 +1,67 @@
+entered daikon.chicory.Runtime.setDtrace(.\InsertionSort.dtrace.gz, false)...
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+examples.InsertionSort.dummyInner(int[], int, int, int):::ENTER
+arr != null
+j >= 1
+i >= j
+i <= size(arr[])-1
+j <= size(arr[])-1
+newValue <= arr[i]
+newValue < arr[i-1]
+newValue <= arr[j]
+newValue < arr[j-1]
+arr[i] >= arr[j]
+arr[i-1] >= arr[j]
+arr[i-1] >= arr[j-1]
+===========================================================================
+examples.InsertionSort.dummyInner(int[], int, int, int):::EXIT
+arr[] == orig(arr[])
+orig(i) <= size(arr[])-1
+orig(j) <= size(arr[])-1
+orig(newValue) <= arr[orig(i)]
+orig(newValue) < arr[orig(i)-1]
+orig(newValue) <= arr[orig(j)]
+orig(newValue) < arr[orig(j)-1]
+arr[orig(i)] >= arr[orig(j)]
+arr[orig(i)-1] >= arr[orig(j)]
+arr[orig(i)-1] >= arr[orig(j)-1]
+===========================================================================
+examples.InsertionSort.dummyOuter(int[], int, int, int):::ENTER
+arr != null
+i >= 1
+j >= 0
+i > j
+i <= size(arr[])-1
+j < size(arr[])-1
+j != arr[i-1]
+arr[i-1] >= arr[j]
+===========================================================================
+examples.InsertionSort.dummyOuter(int[], int, int, int):::EXIT
+arr[] == orig(arr[])
+orig(i) <= size(arr[])-1
+orig(j) < size(arr[])-1
+orig(j) != arr[orig(i)-1]
+arr[orig(i)-1] >= arr[orig(j)]
+===========================================================================
+examples.InsertionSort.insertionSort(int[]):::ENTER
+arr != null
+size(arr[]) >= 1
+===========================================================================
+examples.InsertionSort.insertionSort(int[]):::EXIT
+arr[] <= orig(arr[]) (lexically)
+arr[] sorted by <=
+===========================================================================
+examples.InsertionSort.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+examples.InsertionSort.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+Exiting Daikon.

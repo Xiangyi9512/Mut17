@@ -15,9 +15,9 @@ do
 	session="session"
 	sessionName=$session$var
 	echo $sessionName;
-	# java mujava.cli.testnew $sessionName $javaFile
-	# java mujava.cli.genmutes -ALL $sessionName
-	# /bin/cp -r $sessionName "C:/Users/yxy/Documents/daikonparent/daikon/examples/program";
+	java mujava.cli.testnew $sessionName $javaFile
+	java mujava.cli.genmutes -ALL $sessionName
+	/bin/cp -r $sessionName "C:/Users/yxy/Documents/daikonparent/daikon/examples/program";
 done
 echo $PWD;
 homeDirectory="C:/Users/yxy/Documents/daikonparent/daikon/examples/program";
@@ -49,10 +49,12 @@ do
 		cd $relativePath;
 		echo $PWD;
 		javac -g $fullfile;
-		java daikon.Chicory --daikon $filename > $textFile & TASK_PID=$!;
-		echo taskID=$TASK_PID
-		/bin/sleep 5
-		kill $TASK_PID
+		java daikon.Chicory --daikon $filename > $textFile & TASK_PID=$!
+		echo $TASK_PID
+		/bin/sleep 2
+		taskkill /F /IM $TASK_PID
+		taskkill /F /IM java.exe
+		echo finished
 		cd $homeDirectory;
 	fi
 done

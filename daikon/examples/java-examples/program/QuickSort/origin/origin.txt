@@ -1,0 +1,57 @@
+entered daikon.chicory.Runtime.setDtrace(.\quicksort.dtrace.gz, false)...
+[2, 20, 24, 32, 43, 45, 56]
+[2, 3, 4, 5, 6, 7, 8, 9, 10]
+[1, 2, 3, 4, 5, 6, 7, 8]
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[1, 1, 1, 2, 2, 3]
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+quicksort.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+quicksort.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+quicksort.quickSort(int[], int, int):::ENTER
+arr != null
+arr[] elements >= 1
+low >= 0
+low < high
+low < size(arr[])-1
+low != arr[low]
+high <= size(arr[])-1
+size(arr[])-1 != arr[high]
+===========================================================================
+quicksort.quickSort(int[], int, int):::EXIT66
+===========================================================================
+quicksort.quickSort(int[], int, int):::EXIT
+arr[] <= orig(arr[]) (lexically)
+arr[] elements >= 1
+orig(arr[low]) in arr[]
+orig(arr[high]) in arr[]
+orig(arr[high-1]) in arr[]
+arr[orig(low)] in orig(arr[])
+arr[orig(high)] in orig(arr[])
+arr[orig(high)-1] in orig(arr[])
+orig(low) < size(arr[])-1
+orig(low) != arr[orig(low)]
+orig(high) <= size(arr[])-1
+size(arr[])-1 != arr[orig(high)]
+size(arr[])-1 != orig(arr[high])
+arr[orig(low)] <= arr[orig(high)]
+arr[orig(low)] <= arr[orig(high)-1]
+arr[orig(low)] <= orig(arr[low])
+arr[orig(low)] <= orig(arr[high])
+arr[orig(low)] <= orig(arr[high-1])
+arr[orig(high)] >= arr[orig(high)-1]
+arr[orig(high)] >= orig(arr[low])
+arr[orig(high)] >= orig(arr[high])
+arr[orig(high)] >= orig(arr[high-1])
+Exiting Daikon.

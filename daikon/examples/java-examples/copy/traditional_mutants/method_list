@@ -1,0 +1,5 @@
+person(java.lang.String,int)
+void_setName(java.lang.String)
+java.lang.String_getName()
+void_setAge(int)
+int_getAge()

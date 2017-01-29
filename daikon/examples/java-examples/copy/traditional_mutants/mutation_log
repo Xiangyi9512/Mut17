@@ -1,0 +1,22 @@
+AOIU_1:14:person(java.lang.String,int):a => -a
+AOIU_2:29:void_setAge(int):a => -a
+AOIU_3:34:int_getAge():age => -age
+AOIS_1:14:person(java.lang.String,int):a => ++a
+AOIS_2:14:person(java.lang.String,int):a => --a
+AOIS_3:14:person(java.lang.String,int):a => a++
+AOIS_4:14:person(java.lang.String,int):a => a--
+AOIS_5:29:void_setAge(int):a => ++a
+AOIS_6:29:void_setAge(int):a => --a
+AOIS_7:29:void_setAge(int):a => a++
+AOIS_8:29:void_setAge(int):a => a--
+AOIS_9:34:int_getAge():age => age++
+AOIS_10:34:int_getAge():age => age--
+LOI_1:14:person(java.lang.String,int):a => ~a
+LOI_2:29:void_setAge(int):a => ~a
+LOI_3:34:int_getAge():age => ~age
+SDL_1:14:person(java.lang.String,int): this.name = n; this.age = a;  =>   this.age = a;
+SDL_2:14:person(java.lang.String,int): this.name = n; this.age = a;  =>   this.name = n;
+SDL_3:19:void_setName(java.lang.String): name = n;  =>  
+SDL_4:25:java.lang.String_getName(): return name;  =>   return \"\";
+SDL_5:29:void_setAge(int): age = a;  =>  
+SDL_6:35:int_getAge(): return age;  =>   return 0;

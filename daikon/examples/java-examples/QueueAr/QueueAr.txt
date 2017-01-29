@@ -1,0 +1,564 @@
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+DataStructures.MyInteger:::OBJECT
+this.value == 0
+===========================================================================
+DataStructures.MyInteger.MyInteger(int):::ENTER
+x == 0
+===========================================================================
+DataStructures.MyInteger.MyInteger(int):::EXIT
+this.value == orig(x)
+===========================================================================
+DataStructures.QueueAr:::OBJECT
+this.theArray != null
+this.theArray.getClass().getName() == java.lang.Object[].class
+this.currentSize >= 0
+this.front >= 0
+this.back >= 0
+this.currentSize <= size(this.theArray[])
+this.front <= size(this.theArray[])-1
+this.back <= size(this.theArray[])-1
+===========================================================================
+DataStructures.QueueAr.QueueAr(int):::ENTER
+===========================================================================
+DataStructures.QueueAr.QueueAr(int):::EXIT
+this.currentSize == this.front
+this.back == size(this.theArray[])-1
+orig(capacity) == size(this.theArray[])
+this.theArray[this.currentSize] == this.theArray[this.back]
+this.theArray[this.currentSize] == this.theArray[orig(capacity)-1]
+this.theArray[] elements == null
+this.theArray[].getClass().getName() elements == null
+this.currentSize == 0
+this.theArray[] elements == this.theArray[this.currentSize]
+this.currentSize <= this.back
+===========================================================================
+DataStructures.QueueAr.dequeue():::ENTER
+this.theArray[this.front] != null
+this.theArray[this.back] != null
+===========================================================================
+DataStructures.QueueAr.dequeue():::EXIT93
+===========================================================================
+DataStructures.QueueAr.dequeue():::EXIT
+this.theArray == orig(this.theArray)
+this.back == orig(this.back)
+return == orig(this.theArray[this.front])
+size(this.theArray[]) == orig(size(this.theArray[]))
+this.theArray[this.currentSize] == this.theArray[orig(this.currentSize)-1]
+orig(this.theArray[post(this.currentSize)]) == orig(this.theArray[this.currentSize-1])
+return != null
+this.theArray[orig(this.front)] == null
+this.theArray.getClass().getName() != return.getClass().getName()
+this.theArray.getClass().getName() == orig(this.theArray.getClass().getName())
+this.currentSize - orig(this.currentSize) + 1 == 0
+this.currentSize <= size(this.theArray[])-1
+return.getClass().getName() in orig(this.theArray[].getClass().getName())
+orig(this.currentSize) <= size(this.theArray[])
+orig(this.front) <= size(this.theArray[])-1
+===========================================================================
+DataStructures.QueueAr.dequeueAll():::ENTER
+this.currentSize == size(this.theArray[])
+this.back == size(this.theArray[])-1
+this.theArray[this.currentSize-1] == this.theArray[this.back]
+this.front == 0
+===========================================================================
+DataStructures.QueueAr.dequeueAll():::EXIT
+this.theArray == orig(this.theArray)
+this.currentSize == this.front
+this.currentSize == orig(this.front)
+this.back == orig(this.back)
+this.back == size(this.theArray[])-1
+this.back == orig(size(this.theArray[]))-1
+orig(this.currentSize) == size(this.theArray[])
+this.theArray[this.currentSize] == this.theArray[this.back]
+this.theArray[this.currentSize] == this.theArray[orig(this.currentSize)-1]
+this.theArray[this.currentSize] == this.theArray[orig(this.back)]
+this.theArray[] elements == null
+this.theArray[].getClass().getName() elements == null
+this.currentSize == 0
+this.theArray.getClass().getName() == orig(this.theArray.getClass().getName())
+this.theArray[] elements == this.theArray[this.currentSize]
+===========================================================================
+DataStructures.QueueAr.enqueue(java.lang.Object):::ENTER
+x != null
+this.theArray.getClass().getName() != x.getClass().getName()
+this.currentSize <= size(this.theArray[])-1
+===========================================================================
+DataStructures.QueueAr.enqueue(java.lang.Object):::EXIT
+this.theArray == orig(this.theArray)
+this.front == orig(this.front)
+orig(x) == this.theArray[this.back]
+size(this.theArray[]) == orig(size(this.theArray[]))
+this.theArray[this.currentSize-1] == this.theArray[orig(this.currentSize)]
+orig(this.theArray[post(this.currentSize)-1]) == orig(this.theArray[this.currentSize])
+this.currentSize >= 1
+this.theArray[this.front] != null
+orig(this.theArray[post(this.back)]) == null
+this.theArray.getClass().getName() == orig(this.theArray.getClass().getName())
+this.theArray.getClass().getName() != orig(x.getClass().getName())
+orig(x.getClass().getName()) in this.theArray[].getClass().getName()
+this.currentSize - orig(this.currentSize) - 1 == 0
+orig(this.currentSize) <= size(this.theArray[])-1
+orig(this.back) <= size(this.theArray[])-1
+===========================================================================
+DataStructures.QueueAr.getFront():::ENTER
+===========================================================================
+DataStructures.QueueAr.getFront():::EXIT75
+return == this.theArray[this.currentSize]
+return == this.theArray[this.back]
+return == this.theArray[orig(this.currentSize)]
+return == this.theArray[orig(this.back)]
+return == orig(this.theArray[post(this.currentSize)])
+return == orig(this.theArray[post(this.back)])
+return == orig(this.theArray[this.currentSize])
+return == orig(this.theArray[this.back])
+this.theArray[] elements == null
+this.theArray[].getClass().getName() elements == null
+this.currentSize == 0
+return == null
+this.theArray[] elements == return
+this.currentSize <= this.front
+this.currentSize <= this.back
+this.currentSize <= size(this.theArray[])-1
+===========================================================================
+DataStructures.QueueAr.getFront():::EXIT76
+this.currentSize >= 1
+return != null
+this.theArray[this.back] != null
+===========================================================================
+DataStructures.QueueAr.getFront():::EXIT
+this.theArray == orig(this.theArray)
+this.theArray[] == orig(this.theArray[])
+this.currentSize == orig(this.currentSize)
+this.front == orig(this.front)
+this.back == orig(this.back)
+return == this.theArray[this.front]
+return == this.theArray[orig(this.front)]
+return == orig(this.theArray[post(this.front)])
+return == orig(this.theArray[this.front])
+(this.currentSize == 0)  <==>  (return == null)
+(this.currentSize == 0)  <==>  (this.theArray[this.back] == null)
+(this.currentSize == 0)  ==>  (orig(this.theArray[post(this.currentSize)]) == null)
+(this.currentSize == 0)  ==>  (orig(this.theArray[this.currentSize]) == null)
+(this.currentSize == 0)  ==>  (return == orig(this.theArray[post(this.currentSize)]))
+(this.currentSize == 0)  ==>  (return == orig(this.theArray[this.currentSize]))
+(this.currentSize == 0)  ==>  (return == this.theArray[orig(this.currentSize)])
+(this.currentSize == 0)  ==>  (return == this.theArray[this.back])
+(this.currentSize == 0)  ==>  (return == this.theArray[this.currentSize])
+(this.currentSize == 0)  ==>  (this.currentSize <= size(this.theArray[])-1)
+(this.currentSize == 0)  ==>  (this.currentSize <= this.back)
+(this.currentSize == 0)  ==>  (this.currentSize <= this.front)
+(this.currentSize == 0)  ==>  (this.theArray[] elements == null)
+(this.currentSize == 0)  ==>  (this.theArray[] elements == orig(this.theArray[post(this.currentSize)]))
+(this.currentSize == 0)  ==>  (this.theArray[] elements == orig(this.theArray[this.currentSize]))
+(this.currentSize == 0)  ==>  (this.theArray[] elements == return)
+(this.currentSize == 0)  ==>  (this.theArray[] elements == this.theArray[orig(this.currentSize)])
+(this.currentSize == 0)  ==>  (this.theArray[] elements == this.theArray[this.back])
+(this.currentSize == 0)  ==>  (this.theArray[] elements == this.theArray[this.currentSize])
+(this.currentSize == 0)  ==>  (this.theArray[].getClass().getName() elements == null)
+(this.currentSize == 0)  ==>  (this.theArray[orig(this.currentSize)] == null)
+(this.currentSize == 0)  ==>  (this.theArray[this.currentSize] == null)
+this.theArray.getClass().getName() != return.getClass().getName()
+this.theArray.getClass().getName() == orig(this.theArray.getClass().getName())
+return.getClass().getName() in this.theArray[].getClass().getName()
+===========================================================================
+DataStructures.QueueAr.isEmpty():::ENTER
+===========================================================================
+DataStructures.QueueAr.isEmpty():::EXIT
+this.theArray == orig(this.theArray)
+this.theArray[] == orig(this.theArray[])
+this.currentSize == orig(this.currentSize)
+this.front == orig(this.front)
+this.back == orig(this.back)
+(this.currentSize == 0)  <==>  (return == true)
+(this.currentSize == 0)  ==>  (this.currentSize <= size(this.theArray[])-1)
+(this.currentSize == 0)  ==>  (this.currentSize <= this.back)
+(this.currentSize == 0)  ==>  (this.currentSize <= this.front)
+(this.currentSize == 0)  ==>  (this.theArray[] elements == null)
+(this.currentSize == 0)  ==>  (this.theArray[] elements == orig(this.theArray[post(this.currentSize)]))
+(this.currentSize == 0)  ==>  (this.theArray[] elements == orig(this.theArray[this.currentSize]))
+(this.currentSize == 0)  ==>  (this.theArray[] elements == this.theArray[orig(this.currentSize)])
+(this.currentSize == 0)  ==>  (this.theArray[] elements == this.theArray[this.back])
+(this.currentSize == 0)  ==>  (this.theArray[] elements == this.theArray[this.currentSize])
+(this.currentSize == 0)  ==>  (this.theArray[] elements == this.theArray[this.front])
+(this.currentSize == 0)  ==>  (this.theArray[].getClass().getName() elements == null)
+(this.currentSize == 0)  ==>  (this.theArray[this.currentSize] == this.theArray[this.back])
+(this.currentSize == 0)  ==>  (this.theArray[this.currentSize] == this.theArray[this.front])
+this.theArray.getClass().getName() == orig(this.theArray.getClass().getName())
+===========================================================================
+DataStructures.QueueAr.isEmpty():::EXIT;condition="return == true"
+this.theArray[this.currentSize] == this.theArray[this.front]
+this.theArray[this.currentSize] == this.theArray[this.back]
+this.theArray[this.currentSize] == this.theArray[orig(this.front)]
+this.theArray[this.currentSize] == this.theArray[orig(this.back)]
+this.theArray[this.currentSize] == orig(this.theArray[post(this.front)])
+this.theArray[this.currentSize] == orig(this.theArray[post(this.back)])
+this.theArray[this.currentSize] == orig(this.theArray[this.front])
+this.theArray[this.currentSize] == orig(this.theArray[this.back])
+this.theArray[] elements == null
+this.theArray[].getClass().getName() elements == null
+this.currentSize == 0
+return == true
+this.theArray[] elements == this.theArray[this.currentSize]
+this.currentSize <= this.front
+this.currentSize <= this.back
+this.currentSize <= size(this.theArray[])-1
+===========================================================================
+DataStructures.QueueAr.isEmpty():::EXIT;condition="not(return == true)"
+this.currentSize >= 1
+return == false
+this.theArray[this.front] != null
+this.theArray[this.back] != null
+===========================================================================
+DataStructures.QueueAr.isFull():::ENTER
+===========================================================================
+DataStructures.QueueAr.isFull():::EXIT
+this.theArray == orig(this.theArray)
+this.theArray[] == orig(this.theArray[])
+this.currentSize == orig(this.currentSize)
+this.front == orig(this.front)
+this.back == orig(this.back)
+(return == false)  <==>  (this.currentSize <= size(this.theArray[])-1)
+(return == true)  <==>  (this.currentSize == size(this.theArray[]))
+(return == true)  ==>  (this.theArray[] elements != null)
+this.theArray.getClass().getName() == orig(this.theArray.getClass().getName())
+===========================================================================
+DataStructures.QueueAr.isFull():::EXIT;condition="return == true"
+this.currentSize == size(this.theArray[])
+this.currentSize == orig(size(this.theArray[]))
+this.theArray[] elements != null
+return == true
+===========================================================================
+DataStructures.QueueAr.isFull():::EXIT;condition="not(return == true)"
+return == false
+this.currentSize <= size(this.theArray[])-1
+===========================================================================
+DataStructures.QueueAr.makeEmpty():::ENTER
+===========================================================================
+DataStructures.QueueAr.makeEmpty():::EXIT
+this.theArray == orig(this.theArray)
+this.currentSize == this.front
+this.back == size(this.theArray[])-1
+this.back == orig(size(this.theArray[]))-1
+size(this.theArray[]) == orig(size(this.theArray[]))
+this.theArray[this.currentSize] == this.theArray[this.back]
+this.theArray[this.currentSize] == this.theArray[orig(this.front)]
+this.theArray[this.currentSize] == this.theArray[orig(this.back)]
+this.theArray[] elements == null
+this.theArray[].getClass().getName() elements == null
+this.currentSize == 0
+this.theArray.getClass().getName() == orig(this.theArray.getClass().getName())
+this.theArray[] elements == this.theArray[this.currentSize]
+this.currentSize <= this.back
+this.currentSize <= orig(this.currentSize)
+this.currentSize <= orig(this.front)
+this.currentSize <= orig(this.back)
+this.back >= orig(this.front)
+this.back >= orig(this.back)
+orig(this.currentSize) <= size(this.theArray[])
+===========================================================================
+DataStructures.QueueArTester:::CLASS
+DataStructures.QueueArTester.q != null
+DataStructures.QueueArTester.q.theArray != null
+DataStructures.QueueArTester.q.theArray.getClass().getName() == java.lang.Object[].class
+DataStructures.QueueArTester.q.currentSize >= 0
+DataStructures.QueueArTester.q.front >= 0
+DataStructures.QueueArTester.q.back >= 0
+DataStructures.QueueArTester.rnd has only one value
+DataStructures.QueueArTester.rnd != null
+DataStructures.QueueArTester.q.currentSize <= size(DataStructures.QueueArTester.q.theArray[])
+DataStructures.QueueArTester.q.front <= size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.q.back <= size(DataStructures.QueueArTester.q.theArray[])-1
+===========================================================================
+DataStructures.QueueArTester.dequeue():::ENTER
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front] != null
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back] != null
+===========================================================================
+DataStructures.QueueArTester.dequeue():::EXIT
+DataStructures.QueueArTester.q == orig(DataStructures.QueueArTester.q)
+DataStructures.QueueArTester.q.theArray == orig(DataStructures.QueueArTester.q.theArray)
+DataStructures.QueueArTester.q.back == orig(DataStructures.QueueArTester.q.back)
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+size(DataStructures.QueueArTester.q.theArray[]) == orig(size(DataStructures.QueueArTester.q.theArray[]))
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.currentSize)-1]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.front)])
+orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.currentSize)]) == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize-1])
+DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.front)] == null
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+DataStructures.QueueArTester.q.currentSize - orig(DataStructures.QueueArTester.q.currentSize) + 1 == 0
+DataStructures.QueueArTester.q.currentSize <= size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.q.front != orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back] in orig(DataStructures.QueueArTester.q.theArray[])
+orig(DataStructures.QueueArTester.q.currentSize) <= size(DataStructures.QueueArTester.q.theArray[])
+orig(DataStructures.QueueArTester.q.front) <= size(DataStructures.QueueArTester.q.theArray[])-1
+===========================================================================
+DataStructures.QueueArTester.doNew(int):::ENTER
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+DataStructures.QueueArTester.q.currentSize <= DataStructures.QueueArTester.q.front
+DataStructures.QueueArTester.q.currentSize <= DataStructures.QueueArTester.q.back
+DataStructures.QueueArTester.q.currentSize < size
+DataStructures.QueueArTester.q.currentSize <= size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.q.front != size
+DataStructures.QueueArTester.q.back != size
+size != size(DataStructures.QueueArTester.q.theArray[])-1
+===========================================================================
+DataStructures.QueueArTester.doNew(int):::EXIT
+DataStructures.QueueArTester.q.currentSize == DataStructures.QueueArTester.q.front
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.currentSize)
+DataStructures.QueueArTester.q.back == size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+orig(size) == size(DataStructures.QueueArTester.q.theArray[])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(size)-1]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.currentSize)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.front)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back])
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+DataStructures.QueueArTester.q.currentSize <= DataStructures.QueueArTester.q.back
+DataStructures.QueueArTester.q.currentSize <= orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.currentSize <= orig(DataStructures.QueueArTester.q.back)
+DataStructures.QueueArTester.q.currentSize <= orig(size(DataStructures.QueueArTester.q.theArray[]))-1
+orig(DataStructures.QueueArTester.q.theArray[]) elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+===========================================================================
+DataStructures.QueueArTester.enqdeq():::ENTER
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front] != null
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back] != null
+DataStructures.QueueArTester.q.currentSize <= size(DataStructures.QueueArTester.q.theArray[])-1
+===========================================================================
+DataStructures.QueueArTester.enqdeq():::EXIT
+DataStructures.QueueArTester.q == orig(DataStructures.QueueArTester.q)
+DataStructures.QueueArTester.q.theArray == orig(DataStructures.QueueArTester.q.theArray)
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.currentSize)
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+size(DataStructures.QueueArTester.q.theArray[]) == orig(size(DataStructures.QueueArTester.q.theArray[]))
+DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.front)] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.back)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front] != null
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back] != null
+DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.front)] == null
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.front)]) in DataStructures.QueueArTester.q.theArray[]
+DataStructures.QueueArTester.q.currentSize <= size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.q.front != orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.back != orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.back != orig(DataStructures.QueueArTester.q.back)
+DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.back)] in orig(DataStructures.QueueArTester.q.theArray[])
+orig(DataStructures.QueueArTester.q.front) <= size(DataStructures.QueueArTester.q.theArray[])-1
+orig(DataStructures.QueueArTester.q.back) <= size(DataStructures.QueueArTester.q.theArray[])-1
+===========================================================================
+DataStructures.QueueArTester.enqueue():::ENTER
+DataStructures.QueueArTester.q.currentSize <= size(DataStructures.QueueArTester.q.theArray[])-1
+===========================================================================
+DataStructures.QueueArTester.enqueue():::EXIT
+DataStructures.QueueArTester.q == orig(DataStructures.QueueArTester.q)
+DataStructures.QueueArTester.q.theArray == orig(DataStructures.QueueArTester.q.theArray)
+DataStructures.QueueArTester.q.front == orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+size(DataStructures.QueueArTester.q.theArray[]) == orig(size(DataStructures.QueueArTester.q.theArray[]))
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize-1] == DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.currentSize)]
+orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.currentSize)-1]) == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize])
+DataStructures.QueueArTester.q.currentSize >= 1
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front] != null
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back] != null
+orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.back)]) == null
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+DataStructures.QueueArTester.q.currentSize - orig(DataStructures.QueueArTester.q.currentSize) - 1 == 0
+orig(DataStructures.QueueArTester.q.currentSize) <= size(DataStructures.QueueArTester.q.theArray[])-1
+orig(DataStructures.QueueArTester.q.back) <= size(DataStructures.QueueArTester.q.theArray[])-1
+===========================================================================
+DataStructures.QueueArTester.fillAndEmpty(int):::ENTER
+DataStructures.QueueArTester.q.currentSize == DataStructures.QueueArTester.q.front
+DataStructures.QueueArTester.q.back == size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+size(DataStructures.QueueArTester.q.theArray[]) one of { 1, 2, 10 }
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+===========================================================================
+DataStructures.QueueArTester.fillAndEmpty(int):::EXIT
+DataStructures.QueueArTester.q.currentSize == DataStructures.QueueArTester.q.front
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.currentSize)
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.back == size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+orig(n) == size(DataStructures.QueueArTester.q.theArray[])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.back)]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(n)-1]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.currentSize)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.front)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back])
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+orig(DataStructures.QueueArTester.q.theArray[]) elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+===========================================================================
+DataStructures.QueueArTester.main(java.lang.String[]):::ENTER
+DataStructures.QueueArTester.q.currentSize == DataStructures.QueueArTester.q.front
+DataStructures.QueueArTester.q.currentSize == DataStructures.QueueArTester.q.back
+DataStructures.QueueArTester.q.currentSize == size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.q.currentSize == size(args[])
+DataStructures.QueueArTester.q has only one value
+DataStructures.QueueArTester.q.theArray has only one value
+DataStructures.QueueArTester.q.theArray[] == [null]
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() == [null]
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+size(DataStructures.QueueArTester.q.theArray[]) == 1
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+===========================================================================
+DataStructures.QueueArTester.main(java.lang.String[]):::EXIT
+DataStructures.QueueArTester.q.currentSize == DataStructures.QueueArTester.q.front
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.currentSize)
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.back)
+DataStructures.QueueArTester.q.currentSize == orig(size(DataStructures.QueueArTester.q.theArray[]))-1
+DataStructures.QueueArTester.q.currentSize == orig(size(args[]))
+DataStructures.QueueArTester.q.back == size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+args[] == orig(args[])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back-1]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.currentSize)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.front)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back])
+DataStructures.QueueArTester.q has only one value
+DataStructures.QueueArTester.q.theArray has only one value
+DataStructures.QueueArTester.q.theArray[] contains only nulls and has only one value, of length 12
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() == [null, null, null, null, null, null, null, null, null, null, null, null]
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+args[] == []
+args[].toString == []
+size(DataStructures.QueueArTester.q.theArray[]) == 12
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+orig(DataStructures.QueueArTester.q.theArray[]) elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+===========================================================================
+DataStructures.QueueArTester.makeEmpty():::ENTER
+===========================================================================
+DataStructures.QueueArTester.makeEmpty():::EXIT
+DataStructures.QueueArTester.q == orig(DataStructures.QueueArTester.q)
+DataStructures.QueueArTester.q.theArray == orig(DataStructures.QueueArTester.q.theArray)
+DataStructures.QueueArTester.q.currentSize == DataStructures.QueueArTester.q.front
+DataStructures.QueueArTester.q.back == size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.q.back == orig(size(DataStructures.QueueArTester.q.theArray[]))-1
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+size(DataStructures.QueueArTester.q.theArray[]) == orig(size(DataStructures.QueueArTester.q.theArray[]))
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.front)]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.back)]
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+DataStructures.QueueArTester.q.currentSize <= DataStructures.QueueArTester.q.back
+DataStructures.QueueArTester.q.currentSize <= orig(DataStructures.QueueArTester.q.currentSize)
+DataStructures.QueueArTester.q.currentSize <= orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.currentSize <= orig(DataStructures.QueueArTester.q.back)
+DataStructures.QueueArTester.q.back >= orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.back >= orig(DataStructures.QueueArTester.q.back)
+orig(DataStructures.QueueArTester.q.currentSize) <= size(DataStructures.QueueArTester.q.theArray[])
+===========================================================================
+DataStructures.QueueArTester.observe():::ENTER
+===========================================================================
+DataStructures.QueueArTester.observe():::EXIT
+DataStructures.QueueArTester.q == orig(DataStructures.QueueArTester.q)
+DataStructures.QueueArTester.q.theArray == orig(DataStructures.QueueArTester.q.theArray)
+DataStructures.QueueArTester.q.theArray[] == orig(DataStructures.QueueArTester.q.theArray[])
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.currentSize)
+DataStructures.QueueArTester.q.front == orig(DataStructures.QueueArTester.q.front)
+DataStructures.QueueArTester.q.back == orig(DataStructures.QueueArTester.q.back)
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+===========================================================================
+DataStructures.QueueArTester.variedMakeEmpty(int):::ENTER
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+DataStructures.QueueArTester.q.front one of { 0, 15 }
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+===========================================================================
+DataStructures.QueueArTester.variedMakeEmpty(int):::EXIT
+DataStructures.QueueArTester.q.currentSize == DataStructures.QueueArTester.q.front
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.currentSize)
+DataStructures.QueueArTester.q.back == size(DataStructures.QueueArTester.q.theArray[])-1
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+orig(n) == size(DataStructures.QueueArTester.q.theArray[])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(n)-1]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.currentSize)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.front)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back])
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+orig(DataStructures.QueueArTester.q.theArray[]) elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+===========================================================================
+DataStructures.QueueArTester.walkAround(int):::ENTER
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back-1]
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+DataStructures.QueueArTester.q.front one of { 0, 2, 5 }
+DataStructures.QueueArTester.q.back one of { 1, 4, 29 }
+n one of { 5, 10, 30 }
+size(DataStructures.QueueArTester.q.theArray[]) one of { 5, 10, 30 }
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+===========================================================================
+DataStructures.QueueArTester.walkAround(int):::EXIT
+DataStructures.QueueArTester.q.currentSize == orig(DataStructures.QueueArTester.q.currentSize)
+DataStructures.QueueArTester.rnd == orig(DataStructures.QueueArTester.rnd)
+orig(n) == size(DataStructures.QueueArTester.q.theArray[])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front-1]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back-1]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(DataStructures.QueueArTester.q.front)]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == DataStructures.QueueArTester.q.theArray[orig(n)-1]
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[post(DataStructures.QueueArTester.q.currentSize)])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.front])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back])
+DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize] == orig(DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.back-1])
+DataStructures.QueueArTester.q.theArray[] elements == null
+DataStructures.QueueArTester.q.theArray[].getClass().getName() elements == null
+DataStructures.QueueArTester.q.currentSize == 0
+DataStructures.QueueArTester.q.front one of { 2, 5, 15 }
+DataStructures.QueueArTester.q.back one of { 1, 4, 14 }
+DataStructures.QueueArTester.q.theArray.getClass().getName() == orig(DataStructures.QueueArTester.q.theArray.getClass().getName())
+DataStructures.QueueArTester.q.theArray[] elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+orig(DataStructures.QueueArTester.q.theArray[]) elements == DataStructures.QueueArTester.q.theArray[DataStructures.QueueArTester.q.currentSize]
+Exiting Daikon.

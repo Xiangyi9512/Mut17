@@ -1,0 +1,75 @@
+entered daikon.chicory.Runtime.setDtrace(.\main.dtrace.gz, false)...
+Steve is 27
+Jane is 22
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+main.main(java.lang.String[]):::ENTER
+arg0 has only one value
+arg0.getClass().getName() == java.lang.String[].class
+arg0[] == []
+arg0[].toString == []
+===========================================================================
+main.main(java.lang.String[]):::EXIT
+arg0[] == orig(arg0[])
+arg0[] == []
+arg0[].toString == []
+===========================================================================
+person:::CLASS
+person.name != null
+person.name.toString one of { "Jane", "Steve", "Tom" }
+===========================================================================
+person:::OBJECT
+this.age one of { 22, 27 }
+===========================================================================
+person.getAge():::ENTER
+person.name.toString one of { "Jane", "Steve" }
+===========================================================================
+person.getAge():::EXIT
+person.name == orig(person.name)
+this.age == return
+return == orig(this.age)
+person.name.toString one of { "Jane", "Steve" }
+return one of { 22, 27 }
+person.name.toString == orig(person.name.toString)
+===========================================================================
+person.getName():::ENTER
+person.name.toString one of { "Jane", "Steve" }
+===========================================================================
+person.getName():::EXIT
+person.name == return
+person.name == orig(person.name)
+this.age == orig(this.age)
+person.name.toString one of { "Jane", "Steve" }
+person.name.toString == return.toString
+person.name.toString == orig(person.name.toString)
+===========================================================================
+person.person(java.lang.String, int):::ENTER
+arg0.toString one of { "Jane", "Tom" }
+arg1 one of { 22, 27 }
+===========================================================================
+person.person(java.lang.String, int):::EXIT
+person.name == orig(arg0)
+this.age == orig(arg1)
+person.name.toString one of { "Jane", "Tom" }
+person.name.toString == arg0.toString
+person.name.toString == orig(arg0.toString)
+===========================================================================
+person.setName(java.lang.String):::ENTER
+this has only one value
+person.name has only one value
+person.name.toString == "Tom"
+this.age == 27
+arg0 has only one value
+arg0.toString == "Steve"
+===========================================================================
+person.setName(java.lang.String):::EXIT
+person.name == orig(arg0)
+this.age == orig(this.age)
+person.name has only one value
+person.name.toString == "Steve"
+this.age == 27
+person.name.toString == arg0.toString
+person.name.toString == orig(arg0.toString)
+Exiting Daikon.

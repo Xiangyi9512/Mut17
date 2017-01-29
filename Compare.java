@@ -1,4 +1,4 @@
-// package handleInvariantFiles;
+//package handleInvariantFiles;
 
 import java.io.*;
 import java.util.*;
@@ -273,10 +273,10 @@ public class Compare {
 	}
 	
 	public static void main(String[] args) throws IOException {		
-		compare string = new compare();
+		Compare string = new Compare();
 		File directory = new File("C:/Users/yxy/Documents/daikonparent/daikon/examples/program");
 	    File[] fList = directory.listFiles();
-	    PrintWriter pw = new PrintWriter(new File("test.csv"));
+	    PrintWriter pw = new PrintWriter(new File("Result.csv"));
 	    sb.append("Invariant");
         sb.append(',');
         sb.append("Appear times");

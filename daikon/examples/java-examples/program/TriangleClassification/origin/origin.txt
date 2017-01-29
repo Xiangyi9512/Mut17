@@ -1,0 +1,84 @@
+entered daikon.chicory.Runtime.setDtrace(.\triangleClassification.dtrace.gz, false)...
+INVALID
+EQUILATERAL
+ISOSCELES
+SCALENE
+Daikon version 5.4.0, released October 4, 2016; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+triangleClassification$TriangleType:::OBJECT
+===========================================================================
+triangleClassification$TriangleType.TriangleType(java.lang.String, int):::ENTER
+===========================================================================
+triangleClassification$TriangleType.TriangleType(java.lang.String, int):::EXIT
+$hidden$1.toString == orig($hidden$1.toString)
+===========================================================================
+triangleClassification.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+triangleClassification.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+triangleClassification.tri_type(int, int, int):::ENTER
+c one of { 5, 6, 7 }
+===========================================================================
+triangleClassification.tri_type(int, int, int):::EXIT15
+return == triangleClassification$TriangleType.INVALID
+return == triangleClassification$TriangleType.$VALUES[orig(a)-1]
+triangleClassification$TriangleType.ISOSCELES == triangleClassification$TriangleType.$VALUES[orig(a)]
+triangleClassification$TriangleType.ISOSCELES == triangleClassification$TriangleType.$VALUES[orig(b)-1]
+triangleClassification$TriangleType.SCALENE == triangleClassification$TriangleType.$VALUES[orig(b)]
+orig(b) == size(triangleClassification$TriangleType.$VALUES[])-1
+return has only one value
+orig(a) == 2
+orig(c) == 6
+===========================================================================
+triangleClassification.tri_type(int, int, int):::EXIT21
+return == triangleClassification$TriangleType.EQUILATERAL
+orig(a) == orig(b)
+orig(a) == orig(c)
+return has only one value
+orig(a) == 6
+===========================================================================
+triangleClassification.tri_type(int, int, int):::EXIT25
+return == triangleClassification$TriangleType.ISOSCELES
+triangleClassification$TriangleType.SCALENE == triangleClassification$TriangleType.$VALUES[orig(a)-1]
+triangleClassification$TriangleType.SCALENE == triangleClassification$TriangleType.$VALUES[orig(b)-1]
+orig(a) == orig(b)
+orig(a) == size(triangleClassification$TriangleType.$VALUES[])
+return has only one value
+orig(a) == 4
+orig(c) == 5
+===========================================================================
+triangleClassification.tri_type(int, int, int):::EXIT28
+return == triangleClassification$TriangleType.SCALENE
+return == triangleClassification$TriangleType.$VALUES[orig(a)]
+triangleClassification$TriangleType.ISOSCELES == triangleClassification$TriangleType.$VALUES[orig(a)-1]
+orig(a) == size(triangleClassification$TriangleType.$VALUES[])-1
+return has only one value
+orig(b) == 5
+orig(c) == 7
+===========================================================================
+triangleClassification.tri_type(int, int, int):::EXIT
+triangleClassification$TriangleType.EQUILATERAL has only one value
+triangleClassification$TriangleType.INVALID has only one value
+triangleClassification$TriangleType.ISOSCELES has only one value
+triangleClassification$TriangleType.SCALENE has only one value
+triangleClassification$TriangleType.$VALUES has only one value
+triangleClassification$TriangleType.$VALUES.getClass().getName() == triangleClassification$TriangleType[].class
+triangleClassification$TriangleType.$VALUES[] contains no nulls and has only one value, of length 4
+triangleClassification$TriangleType.$VALUES[].getClass().getName() == [triangleClassification.TriangleType, triangleClassification.TriangleType, triangleClassification.TriangleType, triangleClassification.TriangleType]
+triangleClassification$TriangleType.$VALUES[].getClass().getName() elements == triangleClassification.TriangleType.class
+size(triangleClassification$TriangleType.$VALUES[]) == 4
+return in triangleClassification$TriangleType.$VALUES[]
+triangleClassification$TriangleType.EQUILATERAL in triangleClassification$TriangleType.$VALUES[]
+triangleClassification$TriangleType.INVALID in triangleClassification$TriangleType.$VALUES[]
+triangleClassification$TriangleType.ISOSCELES in triangleClassification$TriangleType.$VALUES[]
+triangleClassification$TriangleType.SCALENE in triangleClassification$TriangleType.$VALUES[]
+Exiting Daikon.
